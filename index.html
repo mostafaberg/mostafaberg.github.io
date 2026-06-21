@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mostafa Berg</title>
+  <meta name="description" content="Hi there 🖖! I'm Mostafa — engineer, game maker, and automotive enthusiast. Living in Norway, born in Egypt." />
+
+  <style>
+    :root {
+      --paper:  #f4f2ec;
+      --ink:    #1b1b1a;
+      --muted:  #8a857c;
+      --accent: #1f4fd6;
+      --rule:   #e2ddd2;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --paper:  #14130e;
+        --ink:    #ece9e1;
+        --muted:  #8f897e;
+        --accent: #8aa6ff;
+        --rule:   #2a2820;
+      }
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      min-height: 100vh;
+      min-height: 100dvh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: ui-monospace, "SFMono-Regular", "Cascadia Code", Menlo, Consolas, monospace;
+      font-size: 1rem;
+      line-height: 1.7;
+      padding: 2.5rem 1.25rem;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    main {
+      width: 100%;
+      max-width: 34rem;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: clamp(1.6rem, 5vw, 2.1rem);
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      line-height: 1.25;
+      margin-bottom: 2rem;
+    }
+
+    .wave {
+      display: inline-block;
+      transform-origin: 70% 70%;
+      animation: wave 2.6s ease-in-out 0.8s 2;
+    }
+    @keyframes wave {
+      0%, 60%, 100% { transform: rotate(0deg); }
+      10%, 30%      { transform: rotate(14deg); }
+      20%, 40%      { transform: rotate(-8deg); }
+    }
+
+    ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+    li { color: var(--ink); }
+
+    .sep { color: var(--muted); padding: 0 0.15rem; }
+
+    a {
+      color: var(--ink);
+      text-decoration: underline;
+      text-underline-offset: 2px;
+      text-decoration-thickness: 1px;
+      text-decoration-color: var(--rule);
+      transition: color 0.15s ease, text-decoration-color 0.15s ease;
+    }
+    a:hover, a:focus-visible {
+      color: var(--accent);
+      text-decoration-color: var(--accent);
+    }
+
+    .links {
+      margin-top: 2rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--rule);
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    :focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 3px;
+      border-radius: 2px;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .wave { animation: none; }
+    }
+    
+    .email > span:nth-child(2) { display: none; }
+  </style>
+</head>
+
+<body>
+  <main>
+    <h1>Hi there <span class="wave">🖖</span> I'm Mostafa</h1>
+
+    <ul>
+      <li>👨‍👩‍👧‍👧 Father of two, always tired</li>
+      <li>📍 Living in Norway 🇳🇴 <span class="sep">·</span> born in Egypt 🇪🇬</li>
+      <li>👨‍💻 CTO <span class="sep">·</span> <a href="https://www.helserespons.com">HelseRespons</a></li>
+      <li>👨‍🎓 B.Sc. Computer Engineering <span class="sep">·</span> <a href="https://aast.edu/en/">AAST</a></li>
+      <li>👾 I make games, when time allows</li>
+      <li>🏎️ Automotive enthusiast, when the budget allows</li>
+    </ul>
+
+    <p class="links">
+      I'm <a href="https://github.com/mostafaberg">@mostafaberg</a> on github
+      <span class="sep">·</span>
+      or email <a class="email" href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#98;&#101;&#114;&#103;&#49;&#64;&#105;&#99;&#108;&#111;&#117;&#100;&#46;&#99;&#111;&#109;">berg1@<span>icloud.</span><span>spam.</span>com</a>
+    </p>
+  </main>
+</body>
+</html>
